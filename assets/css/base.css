@@ -1,0 +1,74 @@
+/* base.css
+ * Global styles: colors, typography, resets.
+ */
+
+:root {
+  --color-bg: #0f172a;          /* dark slate background */
+  --color-surface: #020617;     /* slightly darker card */
+  --color-surface-soft: #111827;
+  --color-accent: #38bdf8;      /* cyan */
+  --color-accent-soft: #0ea5e9;
+  --color-text: #e5e7eb;        /* light gray */
+  --color-text-muted: #9ca3af;  /* muted gray */
+  --color-danger: #f97373;
+
+  --radius-sm: 0.4rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.6);
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background: radial-gradient(circle at top, #1d4ed8 0, #020617 45%, #020617 100%);
+  color: var(--color-text);
+}
+
+/* Typography helpers */
+
+.app-title {
+  font-size: clamp(2.1rem, 3.2vw, 2.7rem);
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.app-tagline {
+  margin: 0.25rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+/* Utility classes */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

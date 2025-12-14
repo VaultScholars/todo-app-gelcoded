@@ -1,0 +1,125 @@
+/* components.css
+ * Smaller reusable UI pieces (buttons, lists, states).
+ */
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--color-text);
+  cursor: pointer;
+  transition:
+    background-color 140ms ease,
+    color 140ms ease,
+    border-color 140ms ease,
+    transform 80ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-soft));
+  color: #0b1120;
+  border-color: rgba(8, 47, 73, 0.8);
+}
+
+.primary-btn:hover {
+  filter: brightness(1.05);
+}
+
+/* Task list */
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: var(--radius-md);
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.task-item-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.task-checkbox {
+  margin-top: 0.15rem;
+}
+
+.task-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.task-title {
+  font-size: 0.95rem;
+}
+
+.task-meta {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.task-delete-btn {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 113, 113, 0.6);
+  background: rgba(127, 29, 29, 0.2);
+  color: #fecaca;
+}
+
+.task-delete-btn:hover {
+  background: rgba(248, 113, 113, 0.15);
+}
+
+/* Completed state */
+
+.task-item.completed {
+  opacity: 0.7;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+}
+
+/* Empty state */
+
+.empty-state {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
