@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vault Scholars TODO App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- CSS: base styles, layout, then components -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-title">My TODOs</h1>
+    <p class="app-tagline">A simple task manager built with HTML, CSS &amp; JavaScript.</p>
+  </header>
+
+  <main class="app-main">
+    <section class="card" aria-labelledby="add-task-heading">
+      <h2 id="add-task-heading" class="section-title">Add a new task</h2>
+      <form id="add-task-form" class="task-form">
+        <div class="form-row">
+          <label for="task-title">Task</label>
+          <input
+            type="text"
+            id="task-title"
+            name="title"
+            placeholder="Example: Finish math homework"
+            required
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="task-category">Category (optional)</label>
+          <input
+            type="text"
+            id="task-category"
+            name="category"
+            placeholder="School, Home, Work..."
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="task-due-date">Due date (optional)</label>
+          <input
+            type="date"
+            id="task-due-date"
+            name="dueDate"
+          />
+        </div>
+
+        <button type="submit" class="btn primary-btn">Add task</button>
+      </form>
+    </section>
+
+    <section class="card" aria-labelledby="task-list-heading">
+      <div class="task-list-header">
+        <h2 id="task-list-heading" class="section-title">Your tasks</h2>
+        <!-- You can turn these into real filters later -->
+      </div>
+
+      <ul id="task-list" class="task-list" aria-live="polite">
+        <!-- Tasks will be dynamically added here by JavaScript -->
+      </ul>
+
+      <p id="empty-state" class="empty-state">
+        No tasks yet. Add your first task above!
+      </p>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      Built as a learning project in the Vault Scholars program.
+    </p>
+  </footer>
+
+  <!-- JavaScript: storage helpers, DOM helpers, then app logic -->
+  <script defer src="assets/js/storage.js"></script>
+  <script defer src="assets/js/dom.js"></script>
+  <script defer src="assets/js/app.js"></script>
+</body>
+</html>

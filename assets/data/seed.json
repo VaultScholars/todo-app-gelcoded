@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Finish math homework",
+    "category": "School",
+    "dueDate": "2025-12-01",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "title": "Practice JS array methods",
+    "category": "Coding",
+    "dueDate": "",
+    "completed": false
+  }
+]
